@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../Slice/userSlice';
-import  '../Users.css';
+import '../Users.css';
 
 
 function Users() {
@@ -8,16 +8,12 @@ function Users() {
   const { users } = useSelector(state => state);
   // console.log(users);
 
-
-
-
-
   return (
     <div className='main-div'>
       <h1>Users Details</h1>
       <button onClick={() => dispatch(getUsers())}>users data</button>
       <table className='table'>
-       {users.status === "accepted" &&  <thead className='head'>
+        {users.status === "accepted" && <thead className='head'>
           <tr className='row'>
             <th className='th'>Id</th>
             <th>Name</th>
@@ -49,7 +45,7 @@ function Users() {
           </tr>)}
         </tbody>
       </table>
-    
+
 
     </div>
   )
